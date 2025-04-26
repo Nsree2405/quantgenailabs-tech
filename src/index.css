@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -93,9 +94,41 @@
 @layer base {
   * {
     @apply border-border;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
 
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.tech-gradient {
+  background: linear-gradient(135deg, #9b87f5 0%, #0EA5E9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.product-hero {
+  height: 60vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.product-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.product-hero-content {
+  position: relative;
+  z-index: 10;
 }
