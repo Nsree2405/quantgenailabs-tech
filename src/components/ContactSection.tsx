@@ -1,11 +1,10 @@
-
 import { useState } from "react";
 import Section from "./Section";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -72,27 +71,38 @@ const ContactSection = () => {
               <div>
                 <h4 className="font-medium text-gray-900">Email</h4>
                 <a 
-                  href="mailto:sayitqwerty@gmail.com"
-                  className="text-gray-600 hover:text-techpurple flex items-center gap-2"
-                >
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=sayitqwerty@gmail.com&su=Subject%20Here&body=Your%20message%20body%20goes%20here"
+                  target="_blank"
+                  className="text-gray-600 hover:text-techpurple flex items-center gap-2">
                   <Mail className="h-4 w-4" />
                   sayitqwerty@gmail.com
                 </a>
               </div>
               <div>
-                <h4 className="font-medium text-gray-900">Headquarters</h4>
+                <h4 className="font-medium text-gray-900">Phone</h4>
+                <a 
+                  href="tel:+919876543210"
+                  className="text-gray-600 hover:text-techpurple flex items-center gap-2"
+                >
+                  <Phone className="h-4 w-4" />
+                  +91 8523040012
+                </a>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-900">Location</h4>
                 <p className="text-gray-600">
                   Vasavi college of engineering,
                   Ibrahimbagh,
-                  Hyderabad, 500086
+                  Hyderabad, 500086.
                 </p>
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">Follow Us</h4>
                 <div className="flex space-x-4 mt-2">
-                  <a href="#" className="text-gray-600 hover:text-techpurple">Twitter</a>
-                  <a href="#" className="text-gray-600 hover:text-techpurple">LinkedIn</a>
-                  <a href="#" className="text-gray-600 hover:text-techpurple">GitHub</a>
+                  <a href="https://www.linkedin.com/in/navya-sree-antharam/" className="text-gray-600 hover:text-techpurple">LinkedIn</a>
+                  <a href="https://github.com/Nsree2405" className="text-gray-600 hover:text-techpurple">GitHub</a>
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sayitqwerty@gmail.com&su=Subject%20Here&body=Your%20message%20body%20goes%20here" 
+                  target="_blank" className="text-gray-600 hover:text-techpurple">Mail</a>
                 </div>
               </div>
             </div>
