@@ -39,20 +39,22 @@ const Navbar = () => {
           href="#home"
           className="font-bold text-2xl flex items-center space-x-2"
         >
-          <span className="tech-gradient">TechVerse</span>
+          <span className="tech-gradient">QuantGenAI Labs</span>
         </a>
 
-        {/* Desktop navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-gray-700 hover:text-techpurple transition-colors duration-300 font-medium"
-            >
-              {item.name}
-            </a>
-          ))}
+        {/* Desktop navigation - Centered */}
+        <nav className="hidden md:flex items-center justify-center w-full">
+          <div className="flex space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-techpurple transition-colors duration-300 font-medium"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
         </nav>
 
         {/* Mobile menu button */}

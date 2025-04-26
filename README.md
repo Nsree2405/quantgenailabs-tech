@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# QuantGenAI Labs
 
 ## Project info
 
