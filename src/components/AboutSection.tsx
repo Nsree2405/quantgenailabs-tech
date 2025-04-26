@@ -1,5 +1,7 @@
+
 import Section from "./Section";
 import { Card, CardContent } from "@/components/ui/card";
+
 const AboutSection = () => {
   const features = [{
     title: "Comprehensive Coverage",
@@ -7,13 +9,8 @@ const AboutSection = () => {
   }, {
     title: "Research Papers",
     description: "Access to cutting-edge research papers and technical documentation"
-  }, {
-    title: "Visual Learning",
-    description: "Rich visual content to help understand complex technological concepts"
-  }, {
-    title: "Technology Applications",
-    description: "Real-world applications and use cases for each technology"
   }];
+
   return <Section id="about" className="bg-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-6 text-center">

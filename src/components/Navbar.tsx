@@ -34,38 +34,40 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a
-          href="#home"
-          className="font-bold text-2xl flex items-center space-x-2"
-        >
-          <span className="tech-gradient">QuantGenAI Labs</span>
-        </a>
+      <div className="container mx-auto px-4 py-4 flex items-center justify-center">
+        <div className="flex flex-col items-center w-full">
+          <a
+            href="#home"
+            className="font-bold text-2xl flex items-center space-x-2 mb-2"
+          >
+            <span className="tech-gradient">QuantGenAI Labs</span>
+          </a>
 
-        {/* Desktop navigation - Centered */}
-        <nav className="hidden md:flex items-center justify-center w-full">
-          <div className="flex space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-techpurple transition-colors duration-300 font-medium"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </nav>
+          {/* Desktop navigation - Centered */}
+          <nav className="hidden md:flex items-center justify-center w-full">
+            <div className="flex space-x-8">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-techpurple transition-colors duration-300 font-medium"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </nav>
 
-        {/* Mobile menu button */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          <Menu className="h-6 w-6" />
-        </Button>
+          {/* Mobile menu button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden absolute right-4 top-4"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <Menu className="h-6 w-6" />
+          </Button>
+        </div>
       </div>
 
       {/* Mobile menu */}
