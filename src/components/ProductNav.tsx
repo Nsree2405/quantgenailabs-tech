@@ -1,11 +1,10 @@
-
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const productCategories = [
   { name: "Machine Learning", slug: "ml" },
   { name: "Deep Learning", slug: "dl" },
-  { name: "NLP", slug: "nlp" },
+  { name: "Natural Language Processing", slug: "nlp" },
   { name: "Robotics", slug: "robotics" },
   { name: "Drones", slug: "drones" },
   { name: "Quantum Computing", slug: "quantum-computing" },

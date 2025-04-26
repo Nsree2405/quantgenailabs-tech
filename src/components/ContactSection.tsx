@@ -1,9 +1,12 @@
+
 import { useState } from "react";
 import Section from "./Section";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
+import { Mail } from "lucide-react";
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -11,38 +14,45 @@ const ContactSection = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const {
-      name,
-      value
-    } = e.target;
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent",
-        description: "We've received your message and will get back to you soon."
-      });
-      setFormData({
-        name: "",
-        email: "",
-        message: ""
-      });
-      setIsSubmitting(false);
-    }, 1000);
+    // Create mailto link with form data
+    const subject = `Contact Form Submission from ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    const mailtoLink = `mailto:sayitqwerty@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open default email client
+    window.location.href = mailtoLink;
+
+    // Show success message
+    toast({
+      title: "Email client opened",
+      description: "Please send the pre-filled email to complete your message submission."
+    });
+
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      message: ""
+    });
+    setIsSubmitting(false);
   };
-  return <Section id="contact" className="bg-gradient-to-br from-slate-50 to-blue-50">
+
+  return (
+    <Section id="contact" className="bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-6 text-center">
           Get In <span className="tech-gradient">Touch</span>
@@ -61,13 +71,21 @@ const ContactSection = () => {
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-gray-900">Email</h4>
-                <p className="text-gray-600">sayitqwerty@gmail.com</p>
+                <a 
+                  href="mailto:sayitqwerty@gmail.com"
+                  className="text-gray-600 hover:text-techpurple flex items-center gap-2"
+                >
+                  <Mail className="h-4 w-4" />
+                  sayitqwerty@gmail.com
+                </a>
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">Headquarters</h4>
-                <p className="text-gray-600">Vasavi college of engineering,
-Ibrahimbagh,
-Hyderabad, 500086</p>
+                <p className="text-gray-600">
+                  Vasavi college of engineering,
+                  Ibrahimbagh,
+                  Hyderabad, 500086
+                </p>
               </div>
               <div>
                 <h4 className="font-medium text-gray-900">Follow Us</h4>
@@ -107,6 +125,8 @@ Hyderabad, 500086</p>
           </div>
         </div>
       </div>
-    </Section>;
+    </Section>
+  );
 };
+
 export default ContactSection;
