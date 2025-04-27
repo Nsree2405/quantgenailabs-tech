@@ -31,33 +31,33 @@ const ProductSection = ({
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 dark:bg-background">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
-            <h3 className="text-2xl font-semibold mb-4">Definition</h3>
-            <p className="text-gray-700">{description}</p>
+            <h3 className="text-2xl font-semibold mb-4 dark:text-white">Definition</h3>
+            <p className="text-gray-700 dark:text-gray-300">{description}</p>
           </div>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-semibold mb-4">Types</h3>
+            <h3 className="text-2xl font-semibold mb-4 dark:text-white">Types</h3>
             <ul className="list-disc pl-6 space-y-2">
               {types.map((type, index) => (
-                <li key={index} className="text-gray-700">{type}</li>
+                <li key={index} className="text-gray-700 dark:text-gray-300">{type}</li>
               ))}
             </ul>
           </div>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-semibold mb-4">Applications</h3>
+            <h3 className="text-2xl font-semibold mb-4 dark:text-white">Applications</h3>
             <ul className="list-disc pl-6 space-y-2">
               {applications.map((application, index) => (
-                <li key={index} className="text-gray-700">{application}</li>
+                <li key={index} className="text-gray-700 dark:text-gray-300">{application}</li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold mb-4">Related Papers</h3>
+            <h3 className="text-2xl font-semibold mb-4 dark:text-white">Related Papers</h3>
             <ul className="space-y-3">
               {papers.map((paper, index) => (
                 <li key={index}>
@@ -65,7 +65,7 @@ const ProductSection = ({
                     href={paper.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-techblue hover:underline"
+                    className="text-techblue hover:underline dark:text-techpurple"
                   >
                     {paper.title}
                   </a>

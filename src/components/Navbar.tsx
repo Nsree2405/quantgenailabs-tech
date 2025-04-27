@@ -39,9 +39,9 @@ const Navbar = () => {
         <div className="flex flex-col items-center flex-grow">
           <a
             href="#home"
-            className="font-bold text-2xl flex items-center space-x-2 mb-2 dark:text-white"
+            className="font-bold text-2xl flex items-center space-x-2 mb-2"
           >
-            <span className="tech-gradient">QuantGenAI Labs</span>
+            <span className="tech-gradient dark:text-white">QuantGenAI Labs</span>
           </a>
 
           <nav className="hidden md:flex items-center justify-center w-full">
@@ -50,7 +50,7 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-techpurple transition-colors duration-300 font-medium dark:text-gray-200 dark:hover:text-techpurple"
+                  className="text-gray-700 hover:text-techpurple transition-colors duration-300 font-medium dark:text-white dark:hover:text-techpurple"
                 >
                   {item.name}
                 </a>
@@ -81,7 +81,7 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-700 dark:text-gray-200 hover:text-techpurple dark:hover:text-techpurple transition-colors duration-300 font-medium py-2"
+              className="text-gray-700 dark:text-white hover:text-techpurple dark:hover:text-techpurple transition-colors duration-300 font-medium py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item.name}
