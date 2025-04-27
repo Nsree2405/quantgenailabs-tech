@@ -1,7 +1,7 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -30,12 +30,12 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-white/90 shadow-md backdrop-blur-md" 
+          ? "bg-white/90 dark:bg-zinc-900/90 shadow-md backdrop-blur-md" 
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-center">
-        <div className="flex flex-col items-center w-full">
+      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="flex flex-col items-center">
           <a
             href="#home"
             className="font-bold text-2xl flex items-center space-x-2 mb-2"
@@ -44,25 +44,30 @@ const Navbar = () => {
           </a>
 
           {/* Desktop navigation - Centered */}
-          <nav className="hidden md:flex items-center justify-center w-full">
+          <nav className="hidden md:flex items-center justify-center">
             <div className="flex space-x-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-techpurple transition-colors duration-300 font-medium"
+                  className="text-gray-700 dark:text-gray-300 hover:text-techpurple transition-colors duration-300 font-medium"
                 >
                   {item.name}
                 </a>
               ))}
             </div>
           </nav>
+        </div>
 
+        {/* Theme Toggle */}
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+          
           {/* Mobile menu button */}
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden absolute right-4 top-4"
+            className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <Menu className="h-6 w-6" />
@@ -72,7 +77,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden bg-white/95 backdrop-blur-md transition-transform duration-300 ${
+        className={`md:hidden dark:bg-zinc-900/95 bg-white/95 backdrop-blur-md transition-transform duration-300 ${
           mobileMenuOpen ? "max-h-64" : "max-h-0"
         } overflow-hidden`}
       >
@@ -81,7 +86,7 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-700 hover:text-techpurple transition-colors duration-300 font-medium py-2"
+              className="text-gray-700 dark:text-gray-300 hover:text-techpurple transition-colors duration-300 font-medium py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item.name}
