@@ -27,9 +27,9 @@ export const productData: Record<string, ProductType> = {
       "Recommendation systems"
     ],
     papers: [
-      { title: "A Few Useful Things to Know About Machine Learning", url: "#" },
-      { title: "Machine Learning: Trends, Perspectives, and Prospects", url: "#" },
-      { title: "Machine Learning for Healthcare", url: "#" }
+      { title: "A Few Useful Things to Know About Machine Learning", url: "https://courses.cs.duke.edu/spring20/compsci527/papers/Domingos.pdf" },
+      { title: "Machine Learning: Trends, Perspectives, and Prospects", url: "https://www.cs.cmu.edu/~tom/pubs/Science-ML-2015.pdf" },
+      // { title: "Machine Learning for Healthcare", url: "#" }
     ],
     imagePath: "ml0.jpg"
   },
@@ -51,9 +51,9 @@ export const productData: Record<string, ProductType> = {
       "Game playing and strategy"
     ],
     papers: [
-      { title: "Deep Learning: A Critical Appraisal", url: "#" },
-      { title: "Attention Is All You Need", url: "#" },
-      { title: "Deep Residual Learning for Image Recognition", url: "#" }
+      { title: "Deep Learning: A Critical Appraisal", url: "https://arxiv.org/pdf/1801.00631" },
+      { title: "Attention Is All You Need", url: "https://arxiv.org/pdf/1706.03762" },
+      // { title: "Deep Residual Learning for Image Recognition", url: "#" }
     ],
     imagePath: "dl0.jpg"
   },
@@ -75,9 +75,9 @@ export const productData: Record<string, ProductType> = {
       "Customer service chatbots"
     ],
     papers: [
-      { title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding", url: "#" },
-      { title: "GPT-3: Language Models are Few-Shot Learners", url: "#" },
-      { title: "Sequence to Sequence Learning with Neural Networks", url: "#" }
+      { title: "Nature of NLP", url: "https://arxiv.org/pdf/2409.19505" },
+      { title: "Exploring the Landscape of Natural Language Processing Research", url: "https://arxiv.org/pdf/2307.10652" },
+
     ],
     imagePath: "nlp0.jpg"
   },
@@ -99,9 +99,8 @@ export const productData: Record<string, ProductType> = {
       "Agricultural automation"
     ],
     papers: [
-      { title: "A Roadmap for US Robotics: From Internet to Robotics", url: "#" },
-      { title: "Probabilistic Robotics: Intelligent Robots and Autonomous Agents", url: "#" },
-      { title: "Soft Robotics: A Perspective—Current Trends and Prospects", url: "#" }
+      { title: "A Roadmap for US Robotics: From Internet to Robotics", url: "https://www.hichristensen.com/pdf/roadmap-2016.pdf" },
+      { title: "ROS: an open-source Robot Operating System", url: "https://robotics.stanford.edu/~ang/papers/icraoss09-ROS.pdf" },
     ],
     imagePath: "robo0.jpg"
   },
@@ -123,9 +122,8 @@ export const productData: Record<string, ProductType> = {
       "Environmental monitoring"
     ],
     papers: [
-      { title: "Drone Applications for Environmental Management", url: "#" },
-      { title: "A Survey of Modelling and Control of Quadrotors", url: "#" },
-      { title: "Autonomous Navigation of UAVs in GPS-denied Environments", url: "#" }
+      { title: "Unmanned Aerial Vehicles", url: "https://arxiv.org/pdf/1805.00881" },
+      { title: "Autonomous Drone Racing", url: "https://arxiv.org/pdf/2301.01755" },
     ],
     imagePath: "drone0.jpg"
   },
@@ -147,9 +145,8 @@ export const productData: Record<string, ProductType> = {
       "Climate modeling and simulation"
     ],
     papers: [
-      { title: "Quantum Supremacy Using a Programmable Superconducting Processor", url: "#" },
-      { title: "Quantum Error Correction for Beginners", url: "#" },
-      { title: "The Road to Quantum Computational Advantage", url: "#" }
+      { title: "Evolution of Quantum Computing", url: "https://arxiv.org/pdf/2204.01856" },
+      { title: "Quantum Computing: Principles and Applications", url: "https://arxiv.org/pdf/2310.09386" },
     ],
     imagePath: "qc0.jpg"
   },
@@ -171,9 +168,9 @@ export const productData: Record<string, ProductType> = {
       "Virtual world creation"
     ],
     papers: [
-      { title: "Generative Adversarial Nets", url: "#" },
-      { title: "DALL-E: Creating Images from Text", url: "#" },
-      { title: "Diffusion Models Beat GANs on Image Synthesis", url: "#" }
+      { title: "Generative Adversarial Nets", url: "https://arxiv.org/pdf/1406.2661" },
+      { title: "Auto-Encoding Variational Bayes", url: "https://arxiv.org/pdf/1312.6114" },
+      { title: "Diffusion Models Beat GANs on Image Synthesis", url: "https://arxiv.org/pdf/2105.05233" }
     ],
     imagePath: "gen0.jpg"
   },
@@ -195,9 +192,9 @@ export const productData: Record<string, ProductType> = {
       "Educational tools and tutoring"
     ],
     papers: [
-      { title: "Language Models are Few-Shot Learners", url: "#" },
-      { title: "Training Language Models to Follow Instructions", url: "#" },
-      { title: "Constitutional AI: Harmlessness from AI Feedback", url: "#" }
+      { title: "Language Models are Few-Shot Learners", url: "https://arxiv.org/pdf/2005.14165" },
+      { title: "Training Language Models to Follow Instructions", url: "https://arxiv.org/pdf/2203.02155" },
+      { title: "Constitutional AI: Harmlessness from AI Feedback", url: "https://arxiv.org/pdf/2212.08073" }
     ],
     imagePath: "llm0.jpg"
   }
