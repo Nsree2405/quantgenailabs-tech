@@ -31,7 +31,7 @@ export const productData: Record<string, ProductType> = {
       { title: "Machine Learning: Trends, Perspectives, and Prospects", url: "#" },
       { title: "Machine Learning for Healthcare", url: "#" }
     ],
-    imagePath: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80"
+    imagePath: "ml0.jpg"
   },
   dl: {
     id: "dl",
@@ -55,7 +55,7 @@ export const productData: Record<string, ProductType> = {
       { title: "Attention Is All You Need", url: "#" },
       { title: "Deep Residual Learning for Image Recognition", url: "#" }
     ],
-    imagePath: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80"
+    imagePath: "dl0.jpg"
   },
   nlp: {
     id: "nlp",
@@ -79,7 +79,7 @@ export const productData: Record<string, ProductType> = {
       { title: "GPT-3: Language Models are Few-Shot Learners", url: "#" },
       { title: "Sequence to Sequence Learning with Neural Networks", url: "#" }
     ],
-    imagePath: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80"
+    imagePath: "nlp0.jpg"
   },
   robotics: {
     id: "robotics",
@@ -103,7 +103,7 @@ export const productData: Record<string, ProductType> = {
       { title: "Probabilistic Robotics: Intelligent Robots and Autonomous Agents", url: "#" },
       { title: "Soft Robotics: A Perspective—Current Trends and Prospects", url: "#" }
     ],
-    imagePath: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80"
+    imagePath: "robo0.jpg"
   },
   drones: {
     id: "drones",
@@ -127,7 +127,7 @@ export const productData: Record<string, ProductType> = {
       { title: "A Survey of Modelling and Control of Quadrotors", url: "#" },
       { title: "Autonomous Navigation of UAVs in GPS-denied Environments", url: "#" }
     ],
-    imagePath: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&q=80"
+    imagePath: "drone0.jpg"
   },
   "quantum-computing": {
     id: "quantum-computing",
@@ -151,7 +151,7 @@ export const productData: Record<string, ProductType> = {
       { title: "Quantum Error Correction for Beginners", url: "#" },
       { title: "The Road to Quantum Computational Advantage", url: "#" }
     ],
-    imagePath: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80"
+    imagePath: "qc0.jpg"
   },
   genai: {
     id: "genai",
@@ -175,7 +175,7 @@ export const productData: Record<string, ProductType> = {
       { title: "DALL-E: Creating Images from Text", url: "#" },
       { title: "Diffusion Models Beat GANs on Image Synthesis", url: "#" }
     ],
-    imagePath: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80"
+    imagePath: "gen0.jpg"
   },
   llms: {
     id: "llms",
@@ -199,6 +199,6 @@ export const productData: Record<string, ProductType> = {
       { title: "Training Language Models to Follow Instructions", url: "#" },
       { title: "Constitutional AI: Harmlessness from AI Feedback", url: "#" }
     ],
-    imagePath: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80"
+    imagePath: "llm0.jpg"
   }
 };
